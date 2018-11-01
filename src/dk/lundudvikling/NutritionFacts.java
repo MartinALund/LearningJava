@@ -2,7 +2,11 @@ package dk.lundudvikling;
 
 
 // Builder Pattern
+// Item2
+// Giver kun mening at bruge når man har mange parametre, eventuelt med mange optional.
 public class NutritionFacts {
+
+    private final String name;
     private final int servingSize;
     private final int servings;
     private final int calories;
@@ -15,6 +19,7 @@ public class NutritionFacts {
         //Required parameters
         private final int servingSize;
         private final int servings;
+        private final String name;
 
         //optional params - initialized to default value
 
@@ -23,9 +28,10 @@ public class NutritionFacts {
         private int sodium = 0;
         private int carbohydrate = 0;
 
-        public Builder(int servingSize, int servings){
+        public Builder(int servingSize, int servings, String name){
             this.servingSize = servingSize;
             this.servings = servings;
+            this.name = name;
         }
 
         public Builder calories(int val){
@@ -60,5 +66,10 @@ public class NutritionFacts {
         fat = builder.fat;
         sodium = builder.sodium;
         carbohydrate = builder.carbohydrate;
+        name = builder.name;
+    }
+
+    public String toString(){
+        return String.format("%s - serving size: %d, servings: %d", name, servingSize, servings);
     }
 }
