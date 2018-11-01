@@ -1,9 +1,10 @@
 package dk.lundudvikling;
 
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello world");
+        NutritionFacts cocaCola = new NutritionFacts.Builder(240,8).calories(100).sodium(150).carbohydrate(15).build();
 	// write your code here
     }
 }
