@@ -49,4 +49,11 @@ public class Person {
         this.age = builder.age;
         this.phoneNumber = builder.phoneNumber;
     }
+
+    public String toString(){
+        return String.format("%s %s \n" +
+                "Alder: %d \n" +
+                "Adresse: %s \n" +
+                "Telefon: %s", firstName, lastName, age, address, phoneNumber);
+    }
 }

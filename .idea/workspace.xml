@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a07f3339-d6c3-4a05-8b1b-b2336bf5b2a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/dk/lundudvikling/Calzone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dk/lundudvikling/NyPizza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dk/lundudvikling/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dk/lundudvikling/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dk/lundudvikling/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/lundudvikling/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dk/lundudvikling/NutritionFacts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/lundudvikling/NutritionFacts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dk/lundudvikling/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/lundudvikling/Person.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,12 +22,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3385" />
+          <entry key="java" value="3677" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3385" />
+          <entry key="JAVA" value="3677" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/lundudvikling/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="94" selection-start-line="12" selection-start-column="94" selection-end-line="12" selection-end-column="94" />
+            <state relative-caret-position="170">
+              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -68,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dk/lundudvikling/NutritionFacts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="61" column="34" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="34" />
+            <state relative-caret-position="306">
+              <caret line="57" column="37" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="37" />
               <folding>
                 <element signature="e#1206#1207#0" expanded="true" />
                 <element signature="e#1256#1257#0" expanded="true" />
@@ -81,11 +76,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dk/lundudvikling/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            <state relative-caret-position="255">
+              <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
               <folding>
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1074#1075#0" expanded="true" />
+                <element signature="e#1003#1004#0" expanded="true" />
+                <element signature="e#1050#1051#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,8 +146,8 @@
         <option value="$PROJECT_DIR$/src/dk/lundudvikling/NyPizza.java" />
         <option value="$PROJECT_DIR$/src/dk/lundudvikling/Calzone.java" />
         <option value="$PROJECT_DIR$/src/dk/lundudvikling/Pizza.java" />
-        <option value="$PROJECT_DIR$/src/dk/lundudvikling/Main.java" />
         <option value="$PROJECT_DIR$/src/dk/lundudvikling/NutritionFacts.java" />
+        <option value="$PROJECT_DIR$/src/dk/lundudvikling/Main.java" />
         <option value="$PROJECT_DIR$/src/dk/lundudvikling/Person.java" />
       </list>
     </option>
@@ -194,7 +189,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541072727494" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541073290857" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -247,7 +242,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12080537" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12080537" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
@@ -255,7 +250,7 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -302,13 +297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dk/lundudvikling/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="94" selection-start-line="12" selection-start-column="94" selection-end-line="12" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/lundudvikling/Pizza.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -336,8 +324,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/lundudvikling/NutritionFacts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="61" column="34" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="34" />
+        <state relative-caret-position="306">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="37" />
           <folding>
             <element signature="e#1206#1207#0" expanded="true" />
             <element signature="e#1256#1257#0" expanded="true" />
@@ -345,13 +333,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dk/lundudvikling/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dk/lundudvikling/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="255">
+          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
           <folding>
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1050#1051#0" expanded="true" />
           </folding>
         </state>
       </provider>
