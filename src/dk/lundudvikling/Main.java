@@ -13,5 +13,8 @@ public class Main {
         //Abstract Builder
         NyPizza pizza = new NyPizza.Builder(NyPizza.Size.LARGE).addTopping(Topping.ONION).addTopping(Topping.SAUSAGE).build();
         Calzone calzone = new Calzone.Builder().addTopping(Topping.HAM).sauceInside().build();
+
+        Singleton.getInstance().methodToTest();
+        EnumSingleton.instance.methodToTest();
     }
 }
