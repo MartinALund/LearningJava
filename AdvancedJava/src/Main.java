@@ -1,11 +1,17 @@
 import Olives.*;
 
+import javax.annotation.processing.Filer;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.URL;
 import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-
+/*
         Olive lig = new Ligurio();
         Olive kal = new Kalamata();
         Olive pic = new Picholine();
@@ -41,15 +47,13 @@ public class Main {
         //endregion
         //region LinkedList
         // Umiddelbart er concensus online at man bare skal bruge ArrayList istedet pga performance.
-        /*
-        Why LinkedList sucks:
-        1. It uses lots of small memory objects, and therefore impacts performance across the process.
-        2. Lots of small objects are bad for cache-locality.
-        3. Any indexed operation requires a traversal, i.e. has O(n) performance. This is not obvious in the source code, leading to algorithms O(n) slower than if ArrayList was used.
-        4. Getting good performance is tricky.
-        5. Even when big-O performance is the same as ArrayList, it is probably going to be significantly slower anyway.
-        6. It's jarring to see LinkedList in source because it is probably the wrong choice.
-         */
+        //Why LinkedList sucks:
+        //1. It uses lots of small memory objects, and therefore impacts performance across the process.
+        //2. Lots of small objects are bad for cache-locality.
+        //3. Any indexed operation requires a traversal, i.e. has O(n) performance. This is not obvious in the source code, leading to algorithms O(n) slower than if ArrayList was used.
+        //4. Getting good performance is tricky.
+        //5. Even when big-O performance is the same as ArrayList, it is probably going to be significantly slower anyway.
+        //6. It's jarring to see LinkedList in source because it is probably the wrong choice.
         LinkedList<Olive> list = new LinkedList<>();
         list.add(new Picholine());
         list.add(new Kalamata());
@@ -62,13 +66,51 @@ public class Main {
         display(list);
 
         //endregion
+*/
 
     }
+
 
     static private void display(Collection<Olive> col){
         System.out.println("List order: ");
         for (Olive olive : col) {
             System.out.println(olive.oliveName.toString());
+        }
+    }
+
+    //Java 7 try with resources, håndterer automatisk close på readers
+    static private void tryWithResources() throws IOException{
+        URL path = Main.class.getResource("textfile.txt");
+
+        try(FileReader fr = new FileReader(path.getFile());
+        BufferedReader br = new BufferedReader(fr)){
+            String s;
+            while((s = br.readLine()) != null){
+                System.out.println(s);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    static private void usingFinally() throws IOException{
+        URL path = Main.class.getResource("textfile.txt");
+
+        FileReader fr = null;
+        BufferedReader br = null;
+        try {
+            fr = new FileReader(path.getFile());
+            br = new BufferedReader(fr);
+
+            String s;
+            while((s = br.readLine()) != null){
+                System.out.println(s);
+            }
+        } catch(NullPointerException ex){
+            System.out.println(ex.getLocalizedMessage());
+        }finally{
+            if(fr != null) fr.close();
+            if(br != null) br.close();
         }
     }
 }
