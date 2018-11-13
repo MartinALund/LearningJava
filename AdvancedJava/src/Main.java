@@ -9,6 +9,7 @@ public class Main {
         Olive lig = new Ligurio();
         Olive kal = new Kalamata();
         Olive pic = new Picholine();
+
         //region Hashset
         //Hashset ignorer duplicate objects, derfor er der stadig kun 3 i sidste sout da den er tilføjet før.
 
@@ -54,9 +55,14 @@ public class Main {
         list.add(new Kalamata());
         list.add(1, new Golden());
         list.addFirst(new Ligurio());
+        display(list);
+        // Poll returnerer reference til objektet og fjerner fra listen
+        Olive o1 = list.pollFirst();
+        System.out.println("Peek: " +o1.oliveName.toString());
+        display(list);
+
         //endregion
 
-        display(list);
     }
 
     static private void display(Collection<Olive> col){
