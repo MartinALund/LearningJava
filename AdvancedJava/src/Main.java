@@ -1,3 +1,4 @@
+import Exceptions.CustomException;
 import Olives.*;
 
 import javax.annotation.processing.Filer;
@@ -68,6 +69,17 @@ public class Main {
         //endregion
 */
 
+        int a = 1;
+        int b = 2;
+
+        try {
+            if (a > b){
+            }else{
+                throw new CustomException();
+            }
+        } catch (CustomException e) {
+            e.printStackTrace();
+        }
     }
 
 
