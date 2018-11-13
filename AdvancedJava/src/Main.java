@@ -1,18 +1,17 @@
-import Exceptions.CustomException;
 import Olives.*;
 
-import javax.annotation.processing.Filer;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.file.*;
 import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
-/*
+    public static void main(String[] args) throws IOException {
+
+        writeLog();
+
         Olive lig = new Ligurio();
         Olive kal = new Kalamata();
         Olive pic = new Picholine();
@@ -67,18 +66,20 @@ public class Main {
         display(list);
 
         //endregion
-*/
 
-        int a = 1;
-        int b = 2;
+    }
 
-        try {
-            if (a > b){
-            }else{
-                throw new CustomException();
-            }
-        } catch (CustomException e) {
-            e.printStackTrace();
+    static private void writeLog(){
+        Path logPath = Paths.get("files/log.txt");
+        Charset charset = Charset.forName("US-ASCII");
+        String codeLog = "Code compiled at: " + new Date().toString();
+
+        try (BufferedWriter writer = Files.newBufferedWriter(logPath, charset, StandardOpenOption.APPEND)){
+            writer.append(codeLog);
+            writer.newLine();
+
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
         }
     }
 
@@ -92,7 +93,7 @@ public class Main {
 
     //Java 7 try with resources, håndterer automatisk close på readers
     static private void tryWithResources() throws IOException{
-        URL path = Main.class.getResource("textfile.txt");
+        URL path = Main.class.getResource("files/textfile.txt");
 
         try(FileReader fr = new FileReader(path.getFile());
         BufferedReader br = new BufferedReader(fr)){
@@ -106,7 +107,7 @@ public class Main {
     }
 
     static private void usingFinally() throws IOException{
-        URL path = Main.class.getResource("textfile.txt");
+        URL path = Main.class.getResource("files/textfile.txt");
 
         FileReader fr = null;
         BufferedReader br = null;

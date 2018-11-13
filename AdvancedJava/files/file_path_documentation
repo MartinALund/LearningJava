@@ -1,0 +1,36 @@
+        //Path works regardless of OS.
+        Path path = Paths.get("files/textfile.txt");
+        System.out.println(path.toString());
+        System.out.println(path.getFileName());
+        System.out.println(path.getNameCount());
+
+        Path realPath = path.toRealPath(LinkOption.NOFOLLOW_LINKS);
+        System.out.println(realPath);
+
+        Path target = Paths.get("files/newfile.txt");
+        Files.copy(path, target, StandardCopyOption.REPLACE_EXISTING);
+
+        //Path toDelete = Paths.get("files/todelete.txt");
+        //Files.delete(toDelete);
+
+        Path newDirectory = Paths.get("files/newdir");
+        Files.createDirectory(newDirectory);
+
+        Files.move(path, newDirectory.resolve(path.getFileName()),
+                StandardCopyOption.REPLACE_EXISTING);
+
+
+READ FOM FILE:
+        Path source = Paths.get("files/newfile.txt");
+        Charset charset = Charset.forName("US-ASCII");
+
+        ArrayList<String> lines = new ArrayList<>();
+        try (BufferedReader reader = Files.newBufferedReader(source, charset)){
+            String line;
+            while((line = reader.readLine()) != null){
+                lines.add(line);
+            }
+        }catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+
