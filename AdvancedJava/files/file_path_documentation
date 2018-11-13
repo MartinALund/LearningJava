@@ -20,7 +20,7 @@
                 StandardCopyOption.REPLACE_EXISTING);
 
 
-READ FOM FILE:
+READ FROM FILE:
         Path source = Paths.get("files/newfile.txt");
         Charset charset = Charset.forName("US-ASCII");
 
@@ -34,3 +34,16 @@ READ FOM FILE:
             System.out.println(ex.getMessage());
         }
 
+WRITE TO FILE:
+
+        Path logPath = Paths.get(path);
+        Charset charset = Charset.forName("US-ASCII");
+        String codeLog = "Code compiled at: " + new Date().toString();
+
+        try (BufferedWriter writer = Files.newBufferedWriter(logPath, charset, StandardOpenOption.APPEND)){
+            writer.append(codeLog);
+            writer.newLine();
+
+        }catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }

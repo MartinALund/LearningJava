@@ -1,0 +1,28 @@
+      int iterations = 3;
+        Threads.MyThread myThread = new Threads.MyThread();
+        myThread.start();
+        Threads.MyRunnable myRunnable = new Threads.MyRunnable();
+        //Anonym thread
+        new Thread(myRunnable).start();
+
+        try {
+            for (int i = 0; i < iterations; i++){
+                System.out.println("from main process");
+                Thread.sleep(3000);
+            }
+        } catch (InterruptedException e) {
+            System.err.println(e);
+        }
+
+// Interrupt
+
+        Threads.MyThread myThread = new Threads.MyThread();
+        myThread.start();
+        try {
+            Thread.sleep(2500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        myThread.interrupt();
+        System.out.println("Called interrupt()");
