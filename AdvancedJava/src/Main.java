@@ -1,6 +1,68 @@
+import Olives.*;
+
+import java.util.*;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        Olive lig = new Ligurio();
+        Olive kal = new Kalamata();
+        Olive pic = new Picholine();
+        //region Hashset
+        //Hashset ignorer duplicate objects, derfor er der stadig kun 3 i sidste sout da den er tilføjet før.
+
+        HashSet<Olive> set = new HashSet<>();
+        set.add(lig);
+        set.add(kal);
+        System.out.println("There are " + set.size() + " olives in the set.");
+        set.add(pic);
+        System.out.println("There are " + set.size() + " olives in the set.");
+        set.add(lig);
+        System.out.println("There are " + set.size() + " olives in the set.");
+        set.remove(lig);
+        System.out.println("There are " + set.size() + " olives in the set.");
+        //endregion
+        //region Treeset
+        //Treeset sorterer listen løbende, derfor langsommere --> Class Olive implementerer comparable hvor man definerer hvad der skal sorteres på
+
+        TreeSet<Olive> treeSet = new TreeSet<>();
+        try{
+            treeSet.add(pic);
+            System.out.println(treeSet);
+            treeSet.add(kal);
+            System.out.println(treeSet);
+            treeSet.add(lig);
+            System.out.println(treeSet);
+        }catch (Exception ex){
+            System.out.println(ex);
+        }
+        //endregion
+        //region LinkedList
+        // Umiddelbart er concensus online at man bare skal bruge ArrayList istedet pga performance.
+        /*
+        Why LinkedList sucks:
+        1. It uses lots of small memory objects, and therefore impacts performance across the process.
+        2. Lots of small objects are bad for cache-locality.
+        3. Any indexed operation requires a traversal, i.e. has O(n) performance. This is not obvious in the source code, leading to algorithms O(n) slower than if ArrayList was used.
+        4. Getting good performance is tricky.
+        5. Even when big-O performance is the same as ArrayList, it is probably going to be significantly slower anyway.
+        6. It's jarring to see LinkedList in source because it is probably the wrong choice.
+         */
+        LinkedList<Olive> list = new LinkedList<>();
+        list.add(new Picholine());
+        list.add(new Kalamata());
+        list.add(1, new Golden());
+        list.addFirst(new Ligurio());
+        //endregion
+
+        display(list);
+    }
+
+    static private void display(Collection<Olive> col){
+        System.out.println("List order: ");
+        for (Olive olive : col) {
+            System.out.println(olive.oliveName.toString());
+        }
     }
 }
