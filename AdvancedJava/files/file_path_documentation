@@ -1,3 +1,57 @@
+
+    //Java 7 try with resources, håndterer automatisk close på readers
+     static private void tryWithResources() throws IOException{
+         URL path = Main.class.getResource("files/textfile.txt");
+
+         try(FileReader fr = new FileReader(path.getFile());
+         BufferedReader br = new BufferedReader(fr)){
+             String s;
+             while((s = br.readLine()) != null){
+                 System.out.println(s);
+             }
+         } catch (FileNotFoundException e) {
+             e.printStackTrace();
+         }
+     }
+
+     static private void usingFinally() throws IOException{
+         URL path = Main.class.getResource("files/textfile.txt");
+
+         FileReader fr = null;
+         BufferedReader br = null;
+         try {
+             fr = new FileReader(path.getFile());
+             br = new BufferedReader(fr);
+
+             String s;
+             while((s = br.readLine()) != null){
+                 System.out.println(s);
+             }
+         } catch(NullPointerException ex){
+             System.out.println(ex.getLocalizedMessage());
+         }finally{
+             if(fr != null) fr.close();
+             if(br != null) br.close();
+         }
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //Path works regardless of OS.
         Path path = Paths.get("files/textfile.txt");
         System.out.println(path.toString());
@@ -47,3 +101,5 @@ WRITE TO FILE:
         }catch (Exception ex){
             System.out.println(ex.getMessage());
         }
+
+

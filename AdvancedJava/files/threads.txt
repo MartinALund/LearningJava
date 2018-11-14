@@ -24,5 +24,16 @@
             e.printStackTrace();
         }
 
+
         myThread.interrupt();
         System.out.println("Called interrupt()");
+
+                //Synchronized threads
+
+                TargetClass target = new TargetClass();
+                SleepThread t1 = new SleepThread(1, target);
+                SleepThread t2 = new SleepThread(2, target);
+                SleepThread t3 = new SleepThread(3, target);
+                t1.start();
+                t2.start();
+                t3.start();
