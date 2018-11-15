@@ -7,24 +7,12 @@ import java.nio.file.*;
 import java.util.*;
 
 import main.java.Olives.Olive;
-import main.java.Threads.SleepThread;
-import main.java.Threads.TargetClass;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
         writeLog("files/log.txt", "Code compiled at: " + new Date().toString());
-
-        TargetClass target = new TargetClass();
-        SleepThread t1 = new SleepThread(1, target);
-        SleepThread t2 = new SleepThread(2, target);
-        SleepThread t3 = new SleepThread(3, target);
-        t1.start();
-        t2.start();
-        t3.start();
-
-
 
     }
 
