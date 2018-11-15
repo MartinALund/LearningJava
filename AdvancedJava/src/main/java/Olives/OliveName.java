@@ -1,4 +1,4 @@
-package Olives;
+package main.java.Olives;
 
 public enum OliveName {
     KALAMATA("Kalamata"), LIGURIO("Ligurio"), PICHOLINE("Picholine"), GOLDEN("Golden");

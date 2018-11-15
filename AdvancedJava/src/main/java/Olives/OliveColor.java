@@ -1,4 +1,4 @@
-package Olives;
+package main.java.Olives;
 
 public enum OliveColor {
     BLACK("Black"), GREEN("Green"), GOLDEN("Golden");

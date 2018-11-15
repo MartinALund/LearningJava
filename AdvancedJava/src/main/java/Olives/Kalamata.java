@@ -1,4 +1,4 @@
-package Olives;
+package main.java.Olives;
 
 public class Kalamata extends Olive {
 

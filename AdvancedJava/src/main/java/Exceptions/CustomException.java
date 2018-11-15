@@ -1,4 +1,4 @@
-package Exceptions;
+package main.java.Exceptions;
 
 public class CustomException extends Exception {
     public static final long serialVersionUID = 42L;

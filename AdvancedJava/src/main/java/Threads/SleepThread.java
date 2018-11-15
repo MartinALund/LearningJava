@@ -1,4 +1,4 @@
-package Threads;
+package main.java.Threads;
 
 public class SleepThread extends Thread {
 

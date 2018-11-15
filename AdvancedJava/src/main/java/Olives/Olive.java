@@ -1,4 +1,4 @@
-package Olives;
+package main.java.Olives;
 
 public class Olive implements Comparable<Olive>{
 
