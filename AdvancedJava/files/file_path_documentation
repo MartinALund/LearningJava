@@ -1,7 +1,7 @@
 
     //Java 7 try with resources, håndterer automatisk close på readers
      static private void tryWithResources() throws IOException{
-         URL path = Main.class.getResource("files/textfile.txt");
+         URL path = main.Main.class.getResource("files/textfile.txt");
 
          try(FileReader fr = new FileReader(path.getFile());
          BufferedReader br = new BufferedReader(fr)){
@@ -15,7 +15,7 @@
      }
 
      static private void usingFinally() throws IOException{
-         URL path = Main.class.getResource("files/textfile.txt");
+         URL path = main.Main.class.getResource("files/textfile.txt");
 
          FileReader fr = null;
          BufferedReader br = null;

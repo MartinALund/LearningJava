@@ -1,11 +1,14 @@
-import Olives.*;
+package main;
 
 import java.io.*;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.*;
 import java.util.*;
-import Threads.*;
+
+import main.java.Olives.Olive;
+import main.java.Threads.SleepThread;
+import main.java.Threads.TargetClass;
 
 public class Main {
 

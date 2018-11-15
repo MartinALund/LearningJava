@@ -1,7 +1,7 @@
       int iterations = 3;
-        Threads.MyThread myThread = new Threads.MyThread();
+        main.java.Threads.MyThread myThread = new main.java.Threads.MyThread();
         myThread.start();
-        Threads.MyRunnable myRunnable = new Threads.MyRunnable();
+        main.java.Threads.MyRunnable myRunnable = new main.java.Threads.MyRunnable();
         //Anonym thread
         new Thread(myRunnable).start();
 
@@ -16,7 +16,7 @@
 
 // Interrupt
 
-        Threads.MyThread myThread = new Threads.MyThread();
+        main.java.Threads.MyThread myThread = new main.java.Threads.MyThread();
         myThread.start();
         try {
             Thread.sleep(2500);
