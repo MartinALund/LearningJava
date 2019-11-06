@@ -15,10 +15,9 @@ public class Main {
         animals.add(new Animal("Turtle", 100));
         filterMethod(animals, "T");
         filterMethod(animals, "Ca");
-
         sortMethod(animals);
-
         forEachMethod(animals);
+        printFirst(animals);
     }
 
     private static void filterMethod(List<Animal> animals, String string){
@@ -37,14 +36,22 @@ public class Main {
     }
 
     private static void printAllAnimals(List<Animal> animals){
-        for (Animal animal : animals){
-            System.out.println(animal);
-        }
+        animals.forEach(System.out::println);
     }
 
     private static void forEachMethod(List<Animal> animals){
         animals.stream().map(x -> x.maxAge).forEach(System.out::println);
         animals.stream().map(y -> y.name).forEach(System.out::println);
-        animals.forEach(System.out::println);
+    }
+
+    private static void printFirst(List<Animal> animals){
+        animals
+                .stream()
+                .findFirst()
+                .ifPresent(System.out::println);
+
+        //Find first, or else return null (if not found)
+        Animal animal = animals.stream().findFirst().orElse(null);
+        System.out.println(animal.name);
     }
 }
