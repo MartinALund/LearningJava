@@ -45,6 +45,6 @@ public class Main {
     private static void forEachMethod(List<Animal> animals){
         animals.stream().map(x -> x.maxAge).forEach(System.out::println);
         animals.stream().map(y -> y.name).forEach(System.out::println);
-        animals.stream().map(z -> z ).forEach(System.out::println);
+        animals.forEach(System.out::println);
     }
 }
