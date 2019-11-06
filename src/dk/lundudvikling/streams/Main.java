@@ -20,6 +20,7 @@ public class Main {
         printFirst(animals);
         summarizeInt(animals);
         stringJoiner(animals);
+        oldestAnimal(animals);
     }
 
     private static void filterMethod(List<Animal> animals, String string){
@@ -78,5 +79,12 @@ public class Main {
                 .stream()
                 .collect(animalNameCollector);
         System.out.println(names);
+    }
+
+    private static void oldestAnimal(List<Animal> animals){
+        animals
+                .stream()
+                .reduce((animal1, animal2) -> animal1.maxAge > animal2.maxAge ? animal1 : animal2)
+                .ifPresent(System.out::println);
     }
 }
