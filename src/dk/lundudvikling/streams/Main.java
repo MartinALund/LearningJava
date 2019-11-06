@@ -19,6 +19,7 @@ public class Main {
         forEachMethod(animals);
         printFirst(animals);
         summarizeInt(animals);
+        stringJoiner(animals);
     }
 
     private static void filterMethod(List<Animal> animals, String string){
@@ -63,5 +64,19 @@ public class Main {
 
         System.out.println(ageSummary);
         System.out.println(ageSummary.getMax());
+    }
+
+    private static void stringJoiner(List<Animal> animals){
+        Collector<Animal, StringJoiner, String> animalNameCollector =
+                Collector.of(
+                        () -> new StringJoiner(" | "),          // supplier
+                        (stringJoiner, animal) -> stringJoiner.add(animal.name.toUpperCase()),  // accumulator
+                        StringJoiner::merge,               // combiner
+                        StringJoiner::toString);                // finisher
+
+        String names = animals
+                .stream()
+                .collect(animalNameCollector);
+        System.out.println(names);
     }
 }
