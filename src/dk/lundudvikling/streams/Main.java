@@ -15,6 +15,10 @@ public class Main {
         animals.add(new Animal("Turtle", 100));
         filterMethod(animals, "T");
         filterMethod(animals, "Ca");
+
+        sortMethod(animals);
+
+        forEachMethod(animals);
     }
 
     private static void filterMethod(List<Animal> animals, String string){
@@ -22,9 +26,25 @@ public class Main {
                 .stream()
                 .filter(x -> x.name.startsWith(string))
                 .collect(Collectors.toList());
+        printAllAnimals(animals);
+    }
+    private static void sortMethod(List<Animal> animals){
+        animals = animals
+                .stream()
+                .sorted()
+                .collect(Collectors.toList());
+        printAllAnimals(animals);
+    }
 
+    private static void printAllAnimals(List<Animal> animals){
         for (Animal animal : animals){
             System.out.println(animal);
         }
+    }
+
+    private static void forEachMethod(List<Animal> animals){
+        animals.stream().map(x -> x.maxAge).forEach(System.out::println);
+        animals.stream().map(y -> y.name).forEach(System.out::println);
+        animals.stream().map(z -> z ).forEach(System.out::println);
     }
 }

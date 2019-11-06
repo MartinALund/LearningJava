@@ -1,6 +1,6 @@
 package dk.lundudvikling.streams;
 
-public class Animal {
+public class Animal implements Comparable<Animal>{
 
     public String name;
     public int maxAge;
@@ -32,5 +32,11 @@ public class Animal {
                 "name='" + name + '\'' +
                 ", maxAge=" + maxAge +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Animal animal) {
+        //Det er muligt at lave denne comparable da String allerede implementeret Comparable
+        return this.getName().compareTo(animal.getName());
     }
 }
