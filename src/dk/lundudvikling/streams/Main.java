@@ -18,6 +18,7 @@ public class Main {
         sortMethod(animals);
         forEachMethod(animals);
         printFirst(animals);
+        summarizeInt(animals);
     }
 
     private static void filterMethod(List<Animal> animals, String string){
@@ -53,5 +54,14 @@ public class Main {
         //Find first, or else return null (if not found)
         Animal animal = animals.stream().findFirst().orElse(null);
         System.out.println(animal.name);
+    }
+
+    private static void summarizeInt(List<Animal> animals){
+        IntSummaryStatistics ageSummary = animals
+                .stream()
+                .collect(Collectors.summarizingInt(a -> a.maxAge));
+
+        System.out.println(ageSummary);
+        System.out.println(ageSummary.getMax());
     }
 }
