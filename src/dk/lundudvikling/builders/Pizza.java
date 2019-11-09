@@ -1,4 +1,4 @@
-package dk.lundudvikling;
+package dk.lundudvikling.builders;
 
 import java.util.EnumSet;
 import java.util.Objects;

@@ -1,7 +1,5 @@
 package dk.lundudvikling.streams;
 
-import dk.lundudvikling.Person;
-
 import java.util.*;
 import java.util.stream.*;
 

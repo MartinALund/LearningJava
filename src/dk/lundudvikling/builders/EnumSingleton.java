@@ -1,4 +1,4 @@
-package dk.lundudvikling;
+package dk.lundudvikling.builders;
 
 public enum EnumSingleton {
     instance;

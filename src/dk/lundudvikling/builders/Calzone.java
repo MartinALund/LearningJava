@@ -1,4 +1,4 @@
-package dk.lundudvikling;
+package dk.lundudvikling.builders;
 
 public class Calzone extends Pizza {
     private final boolean sauceInside;

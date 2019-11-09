@@ -1,6 +1,6 @@
-package dk.lundudvikling;
+package dk.lundudvikling.builders;
 
-import dk.lundudvikling.Pizza.Topping;
+import dk.lundudvikling.builders.Pizza.Topping;
 
 public class Main {
 
