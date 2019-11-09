@@ -11,6 +11,7 @@ public class Main {
         animals.add(new Animal("Cat", 27, "ABCDE"));
         animals.add(new Animal("Tiger", 9, "UNIKID"));
         animals.add(new Animal("Turtle", 100, "ID"));
+        parallelStream(animals);
         getStream(animals);
         filterMethod(animals, "T");
         filterMethod(animals, "Ca");
@@ -26,6 +27,14 @@ public class Main {
     private static void getStream(List<Animal> animals){
         Stream<Animal> animalStream = animals.stream();
         System.out.println(animalStream.findFirst());
+    }
+
+    private static void parallelStream(List<Animal> animals){
+        animals.parallelStream().forEach(Main::print);
+    }
+
+    private static void print(Animal animal){
+        System.out.println(animal.getName());
     }
 
     private static void filterMethod(List<Animal> animals, String string){
