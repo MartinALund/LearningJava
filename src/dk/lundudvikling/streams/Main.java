@@ -11,6 +11,7 @@ public class Main {
         animals.add(new Animal("Cat", 27, "ABCDE"));
         animals.add(new Animal("Tiger", 9, "UNIKID"));
         animals.add(new Animal("Turtle", 100, "ID"));
+        getStream(animals);
         filterMethod(animals, "T");
         filterMethod(animals, "Ca");
         sortMethod(animals);
@@ -20,6 +21,11 @@ public class Main {
         stringJoiner(animals);
         oldestAnimal(animals);
         findById(animals, "ABC");
+    }
+
+    private static void getStream(List<Animal> animals){
+        Stream<Animal> animalStream = animals.stream();
+        System.out.println(animalStream.findFirst());
     }
 
     private static void filterMethod(List<Animal> animals, String string){
