@@ -1,12 +1,12 @@
 package dk.lundudvikling.streams;
 
-public class Animal implements Comparable<Animal>{
+public class TestData implements Comparable<TestData>{
 
     public String name;
     public int maxAge;
     public String id;
 
-    public Animal(String name, int maxAge, String id) {
+    public TestData(String name, int maxAge, String id) {
         this.name = name;
         this.maxAge = maxAge;
         this.id = id;
@@ -46,8 +46,8 @@ public class Animal implements Comparable<Animal>{
     }
 
     @Override
-    public int compareTo(Animal animal) {
+    public int compareTo(TestData testData) {
         //Det er muligt at lave denne comparable da String allerede implementeret Comparable
-        return this.getName().compareTo(animal.getName());
+        return this.getName().compareTo(testData.getName());
     }
 }
