@@ -1,4 +1,4 @@
-package dk.lundudvikling.modernjava;
+package dk.lundudvikling.modernjava.comparator;
 
 import dk.lundudvikling.models.Person;
 
