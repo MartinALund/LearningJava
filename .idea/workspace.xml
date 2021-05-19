@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a07f3339-d6c3-4a05-8b1b-b2336bf5b2a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/dk/lundudvikling/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dk/lundudvikling/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dk/lundudvikling/modernjava/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dk/lundudvikling/modernjava/lambda/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dk/lundudvikling/UUIDGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dk/lundudvikling/streams/TestDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/lundudvikling/streams/TestDataGenerator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +29,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562182825970" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringBoot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../quarkus-template" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -51,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager" selected="Application.Main (3)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dk.lundudvikling.Main" />
       <module name="LearningJava" />
@@ -78,18 +78,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="dk.lundudvikling.builders.Main" />
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dk.lundudvikling.modernjava.lambda.Main" />
       <module name="LearningJava" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dk.lundudvikling.modernjava.lambda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dk.lundudvikling.streams.MainTest" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dk.lundudvikling.streams.Main" />
       <module name="LearningJava" />
       <extension name="coverage">
         <pattern>
@@ -101,8 +104,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dk.lundudvikling.streams.Main" />
+    <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dk.lundudvikling.streams.MainTest" />
       <module name="LearningJava" />
       <extension name="coverage">
         <pattern>
@@ -129,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.MainTest" />
         <item itemvalue="Application.ReflectionMain" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -156,6 +159,10 @@
       <workItem from="1585304336467" duration="1361000" />
       <workItem from="1587668680145" duration="39000" />
       <workItem from="1618395481107" duration="716000" />
+      <workItem from="1619547402436" duration="27000" />
+      <workItem from="1620371849464" duration="1705000" />
+      <workItem from="1621449270447" duration="354000" />
+      <workItem from="1621449649076" duration="99000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed model">
       <created>1573372141055</created>
